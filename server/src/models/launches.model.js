@@ -122,6 +122,7 @@ async function addNewLaunch(launch) {
         customer : ['Axie','Pegaxy']
     });
     const destinationName = await checkPlanet(launch.destination);
+    console.log(destinationName);
     if (!destinationName) {
         throw new Error('No matching planet found');
     }

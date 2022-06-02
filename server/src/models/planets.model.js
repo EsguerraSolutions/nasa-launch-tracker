@@ -31,7 +31,7 @@ function getPlanetData() {
                 const countPlanetsFound = (await getPlanets()).length;
                 console.log('Streaming done');
                 console.log(`Number of Habitable Planets : ${countPlanetsFound}`);
-                console.log(await getPlanets());
+                console.log(await getPlanets()); //DEBUGGING OF CI TESTS
                 resolve();
             });
     });
