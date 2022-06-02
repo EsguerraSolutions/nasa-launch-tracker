@@ -121,14 +121,15 @@ async function addNewLaunch(launch) {
         upcoming : true,
         customer : ['Axie','Pegaxy']
     });
-    const destinationName = await checkPlanet(launch.destination);
+    const destinationPlanet = await checkPlanet(launch.destination);
+    const destinationName = destinationPlanet.keplerName;
     console.log(destinationName);
-    // if (!destinationName) {
-    //     throw new Error('No matching planet found');
-    // }
-    // else {
+    if (!destinationName) {
+        throw new Error('No matching planet found');
+    }
+    else {
         await saveLaunch(newLaunch);
-    // }
+    }
 }
 
 async function checkLaunchID(launchID) {
