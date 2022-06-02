@@ -18,7 +18,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^6.3.3",
-    "morgan": "^1.10.0"
+    "mongoose": "^6.3.3"
   }
 }
