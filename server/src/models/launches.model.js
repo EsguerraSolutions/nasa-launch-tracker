@@ -123,12 +123,12 @@ async function addNewLaunch(launch) {
     });
     const destinationName = await checkPlanet(launch.destination);
     console.log(destinationName);
-    if (!destinationName) {
-        throw new Error('No matching planet found');
-    }
-    else {
+    // if (!destinationName) {
+    //     throw new Error('No matching planet found');
+    // }
+    // else {
         await saveLaunch(newLaunch);
-    }
+    // }
 }
 
 async function checkLaunchID(launchID) {
