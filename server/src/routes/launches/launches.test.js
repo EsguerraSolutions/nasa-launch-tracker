@@ -5,15 +5,16 @@ const {getPlanetData} = require('../../models/planets.model');
 
 describe('Launches API', () => {
 
-    beforeAll(async (done) => {
+    beforeAll(async () => {
         await mongoConnect();
         await getPlanetData();
-        done();
     });
 
     afterAll(async () => {
         await mongoDisconnect();
     });
+
+    jest.setTimeout(60 * 1000);
 
     describe('Test GET /launches', () => {
         test('It should respond with 200 success', async () => {
