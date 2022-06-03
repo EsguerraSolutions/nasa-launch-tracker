@@ -20,7 +20,7 @@ function getPlanetData() {
             }))
             .on('data',async (chunk)=> {
                 if(isHabitable(chunk)) {
-                    savePlanet(chunk); 
+                    await savePlanet(chunk); 
                 }
             })
             .on('error', (err) => {
