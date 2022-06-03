@@ -95,6 +95,7 @@ async function getLaunchesData() {
 }
 
 async function getLaunches(skip, limit) {
+    console.log('Get Launch Route Commencing...');
     return await launchesDB
         .find({}, '-_id -__v')
         .sort('flightID')

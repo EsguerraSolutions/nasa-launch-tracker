@@ -29,7 +29,7 @@ function getPlanetData() {
             })
             .on('end', async () => {
                 const countPlanetsFound = (await getPlanets()).length;
-                console.log('Streaming done');
+                console.log('Populating of Planet Data Commencing...');
                 console.log(`Number of Habitable Planets : ${countPlanetsFound}`);
                 console.log(await getPlanets()); //DEBUGGING OF CI TESTS
                 resolve();
