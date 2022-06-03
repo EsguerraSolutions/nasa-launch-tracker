@@ -5,9 +5,10 @@ const {getPlanetData} = require('../../models/planets.model');
 
 describe('Launches API', () => {
 
-    beforeAll(async () => {
-        // await mongoConnect();
+    beforeAll(async (done) => {
+        await mongoConnect();
         await getPlanetData();
+        done();
     });
 
     afterAll(async () => {
