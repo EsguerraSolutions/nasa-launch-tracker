@@ -124,6 +124,7 @@ async function addNewLaunch(launch) {
     const destinationPlanet = await checkPlanet(launch.destination);
     // const destinationName = destinationPlanet.keplerName;
     console.log(destinationPlanet);
+    console.log('Post Launch Route Commencing...')
     if (!destinationPlanet) {
         throw new Error('No matching planet found');
     }
